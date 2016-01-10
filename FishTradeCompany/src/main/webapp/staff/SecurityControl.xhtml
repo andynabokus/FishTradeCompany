@@ -1,0 +1,54 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+        <html xmlns="http://www.w3.org/1999/xhtml"  
+        xmlns:h="http://java.sun.com/jsf/html"  
+        xmlns:f="http://java.sun.com/jsf/core"  
+        xmlns:p="http://primefaces.org/ui">  
+<h:head />
+  <h:outputStylesheet  name="css/cssproc.css"  />
+<body>
+<p:layout fullPage="true">
+<p:layoutUnit style="color: rgb(51, 0, 51); background-color: rgb(88, 161, 188);" alink="#660000" link="#ff6666" vlink="#cc6600" position="north" size="60" resizable="false" closable="false" collapsible="false">
+<center><font size="6" style="font-family: Purisa; color: rgb(153, 51, 0);">Main Security Action</font></center>
+</p:layoutUnit>
+<p:layoutUnit id="centerUnit" position="center">
+ <h:form>
+         <table style="color: rgb(51, 0, 51); background-color: rgb(88, 161, 188);" width="100%" cellpadding="0" cellspacing="0" border="0" align="center"  class="outer_table">
+            <tr>
+                <td>
+                    <table style="color: rgb(51, 0, 51); background-color: rgb(88, 161, 188);" width="500" height="300" cellpadding="0" cellspacing="0" border="0" align="center">
+                        <tr>
+                            <td align="center">
+								<h:panelGrid columns="2" style="color: rgb(51, 0, 51); background-color: rgb(88, 161, 188);" alink="#660000" link="#ff6666" vlink="#cc6600">
+								<p:commandButton  value="Change System Password" action="SecOfficerData.xhtml" styleClass="ui-icon-password"/> 
+								<p:commandButton  value="Add Security Officer" action="SecOfficerData.xhtml" styleClass="ui-icon-security"  /> 
+								</h:panelGrid>
+							</td>
+						</tr>
+					</table>
+				</td>
+			</tr>
+		</table>
+        <table style="color: rgb(51, 0, 51); background-color: rgb(88, 161, 188);" width="100%" cellpadding="0" cellspacing="0" border="0" align="center"  class="outer_table">
+            <tr>
+                <td>
+                    <table width="500" height="300" cellpadding="0" cellspacing="0" border="0" align="center">
+                        <tr>
+                            <td align="center">
+                                
+                                    <h:panelGrid columns="1" cellpadding="5">
+
+                                        <p:commandButton value="Cancel"  action="LoginStaff.xhtml"/>
+
+                                    </h:panelGrid>                           
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+        </table>
+</h:form>
+</p:layoutUnit>
+</p:layout>
+</body>
+</html>

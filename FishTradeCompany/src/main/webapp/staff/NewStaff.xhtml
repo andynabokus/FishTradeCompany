@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:h="http://java.sun.com/jsf/html"
+       xmlns:p="http://primefaces.org/ui">
+<h:head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Add Fish</title>
+</h:head>
+<h:body style="color: rgb(51, 0, 51); background-color: rgb(88, 161, 188);" alink="#660000" link="#ff6666" vlink="#cc6600">
+	<table style="text-align: left; width: 1236px; margin-left: auto; margin-right: auto; height: 110px;" border="0" cellpadding="0" cellspacing="2" >
+	  	<tbody>
+    	<tr>
+      		<td style="vertical-align: top;">
+      			<table style="text-align: left; width: 1198px; height: 115px;" border="0" cellpadding="2" cellspacing="2">
+        			<tbody>
+          				<tr>
+			<td>
+				<h:graphicImage  id="logoBionic" url="/resources/images/bionic_logo.png" style="width: 275px; height: 106px;" alt=""/>
+				<br/>
+			</td>
+			<td style="vertical-align: top; text-align: center; width: 95%; height: 95%;">
+				<big style="font-family: Purisa; color: rgb(153, 51, 0);"><big><big><big>New Employee Info</big></big></big></big>
+				<br/>
+            </td>
+          				</tr>
+        			</tbody>
+        		</table>
+        	</td>
+        </tr>
+     </tbody>
+     </table> 
+    <h:form id="form">
+     <table width="100%" cellpadding="0" cellspacing="0" border="0" align="center"  class="outer_table">
+            <tr>
+                <td>
+                    <table width="500" height="300" cellpadding="0" cellspacing="0" border="0" align="center">
+                        <tr>
+                            <td align="center">
+                                <p:panel id="panel">
+									<h:panelGrid columns="3">
+									<h:outputLabel value="Employee First Name:"/>
+									<h:inputText id="fName" value="#{staffBean.employee.firstName}" required="true" 
+									requiredMessage = "#{msgs.firstNameRequired}"/>
+									<h:message for="fName" style="color:red" />
+									<p:outputLabel value="Employee Last Name:"/>
+									<h:inputText id="lName" value="#{staffBean.employee.lastName}" required="true" 
+									requiredMessage = "#{msgs.lastNameRequired}"/>
+									<h:message for="lName" style="color:red" />
+									<p:outputLabel value="Employee City:"/>
+									<h:inputText id="city" value="#{staffBean.employee.city}" required="true" 
+									requiredMessage = "#{msgs.cityRequired}"/>
+									<h:message for="city" style="color:red" />
+									<p:outputLabel value="Employee Street:"/>
+									<h:inputText id="street" value="#{staffBean.employee.street}" required="true" 
+									requiredMessage = "#{msgs.streetRequired}"/>
+									<h:message for="street" style="color:red" />
+									<p:outputLabel value="Employee Building Number:"/>	
+									<h:inputText id="bNum" value="#{staffBean.employee.buildingNum}" required="true" 
+									requiredMessage = "#{msgs.buildingNumRequired}"/>
+									<h:message for="bNum" style="color:red" />
+									<h:outputText value="Employee Position:"/>	
+									<h:inputText id="position" value="#{staffBean.employee.position}" required="true" 
+									requiredMessage = "#{msgs.positionRequired}"/>
+									<h:message for="position" style="color:red" />
+									<p:outputLabel value="Employee Phone Number:"/>
+									<h:inputText id="phNum" value="#{staffBean.employee.phoneNum}" required="true" 
+									requiredMessage = "#{msgs.phoneNumRequired}"/>
+									<h:message for="phNum" style="color:red"/>
+									<p:outputLabel value="Employee Login:"/>
+									<h:inputText id="login" value="#{staffBean.employee.login}" required="true" 
+									requiredMessage = "#{msgs.loginReguired}"/>
+									<h:message for="login" style="color:red" />
+									<p:outputLabel value="Employee Password:"/>	
+									<h:inputText id="password" value="#{staffBean.newPassord}" required="true" 
+									requiredMessage = "#{msgs.passwordReguired}"/>
+									<h:message for="password" style="color:red" />
+									<p:outputLabel value="Employee Status:"/>
+									<h:inputText id="status" value="#{staffBean.employee.status}" required="true" 
+									requiredMessage = "#{msgs.statusReguired}"/>
+									<h:message for="status" style="color:red" />
+									<p:outputLabel value="Comments:"/>
+									<h:inputText id="comments" value="#{staffBean.employee.comments}"/>														
+									</h:panelGrid>
+									<p:commandButton value="Submit" action="#{staffBean.saveNewEmployee}"/>
+									<p:commandButton value="Cancel" action="SecurityAction.xhtml"  immediate="true"/>
+								</p:panel>
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+        </table>
+    </h:form>
+</h:body>  
+</html>  

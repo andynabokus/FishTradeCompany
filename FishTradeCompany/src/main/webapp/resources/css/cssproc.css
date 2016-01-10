@@ -1,0 +1,119 @@
+
+.ui-button.ui-icon-manage{
+	width: 410px; 
+    height: 345px; 
+    background-image: url("#{resource['images/saleprocess.jpg']}") !important;
+    color:	#484848;
+    font-family: 'pluto_sansthin';
+    font-size:1.4em; 
+   	text-align: center;
+   	padding: .4em 1em .4em 2.1em;
+ 	margin: 20px 10px;
+ 	font-size: 100% !important; 
+ 	 padding-bottom: 200px;
+}
+.ui-button.ui-icon-order {
+	width: 340px; 
+    height: 300px; 
+    background-image: url("#{resource['images/new_order.jpg']}") !important;
+    color:	#484848;
+    font-family: 'pluto_sansthin';
+    font-size:1.4em; 
+   	text-align: center;
+   	padding: .4em 1em .4em 2.1em;
+ 	margin: 20px 10px;
+ 	font-size: 100% !important; 
+ 	padding-bottom: 200px;
+}
+.ui-button.ui-icon-control {
+	width: 340px; 
+    height: 300px; 
+    background-image: url("#{resource['images/customer_control.png']}") !important;
+    color:	#484848;
+    font-family: 'pluto_sansthin';
+    font-size:1.4em; 
+   	text-align: center;
+   	padding: .4em 1em .4em 2.1em;
+ 	margin: 20px 10px;
+ 	font-size: 100% !important; 
+ 	padding-bottom: 200px;
+}
+.ui-button.ui-icon-income {
+	width: 340px; 
+    height: 300px; 
+    background-image: url("#{resource['images/income_rep.jpg']}") !important;
+    color:	#484848;
+    font-family: 'pluto_sansthin';
+    font-size:1.4em; 
+   	text-align: center;
+   	padding: .4em 1em .4em 2.1em;
+ 	margin: 20px 10px;
+ 	font-size: 100% !important; 
+ 	padding-bottom: 200px;
+}
+.ui-button.ui-icon-pay {
+	width: 340px; 
+    height: 300px; 
+    background-image: url("#{resource['images/pay.png']}") !important;
+    color:	#484848;
+    font-family: 'pluto_sansthin';
+    font-size:1.4em; 
+   	text-align: center;
+   	padding: .4em 1em .4em 2.1em;
+ 	margin: 20px 10px;
+ 	font-size: 100% !important; 
+ 	padding-bottom: 200px;
+}
+.ui-button.ui-icon-borrow {
+	width: 340px; 
+    height: 300px; 
+    background-image: url("#{resource['images/borrow.jpg']}") !important;
+    color:	#484848;
+    font-family: 'pluto_sansthin';
+    font-size:1.4em; 
+   	text-align: center;
+   	padding: .4em 1em .4em 2.1em;
+ 	margin: 20px 10px;
+ 	font-size: 100% !important; 
+ 	padding-bottom: 200px;
+}
+.ui-button.ui-icon-parcel {
+	width: 340px; 
+    height: 300px; 
+    background-image: url("#{resource['images/parcel_box.png']}") !important;
+    color:	#484848;
+    font-family: 'pluto_sansthin';
+    font-size:1.4em; 
+   	text-align: center;
+   	padding: .4em 1em .4em 2.1em;
+ 	margin: 20px 10px;
+ 	font-size: 100% !important; 
+ 	padding-bottom: 200px;
+}
+.ui-button.ui-icon-password {
+	width: 300px; 
+    height: 240px; 
+    background-image: url("#{resource['images/cogwheel.jpg']}") !important;
+    color:	#484848;
+    font-family: 'pluto_sansthin';
+    font-size:1.4em; 
+   	text-align: center;
+   	padding: .4em 1em .4em 2.1em;
+ 	margin: 20px 10px;
+ 	font-size: 100% !important; 
+ 	padding-bottom: 200px;
+}
+.ui-button.ui-icon-security {
+	width: 300px; 
+    height: 240px; 
+    background-image: url("#{resource['images/secofficer.jpg']}") !important;
+    color:	#484848;
+    font-family: 'pluto_sansthin';
+    font-size:1.4em; 
+   	text-align: center;
+   	padding: .4em 1em .4em 2.1em;
+ 	margin: 20px 10px;
+ 	font-size: 100% !important; 
+ 	padding-bottom: 200px;
+}
+

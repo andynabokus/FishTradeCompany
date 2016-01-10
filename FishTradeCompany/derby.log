@@ -1,0 +1,18 @@
+----------------------------------------------------------------
+Sat Dec 12 20:18:35 EET 2015:
+Booting Derby version The Apache Software Foundation - Apache Derby - 10.10.1.1 - (1458268): instance a816c00e-0151-976a-421a-0000101a0b00 
+on database directory /home/andy/Documents/DataBases/FishTradeCompany with class loader WebappClassLoader
+  context: FishTradeCompany
+  delegate: false
+----------> Parent Classloader:
+java.net.URLClassLoader@5acf9800
+ 
+Loaded from file:/home/andy/workspace_ee%20_mars/.metadata/.plugins/org.eclipse.wst.server.core/tmp0/wtpwebapps/FishTradeCompany/WEB-INF/lib/derby-10.10.1.1.jar
+java.vendor=Oracle Corporation
+java.runtime.version=1.8.0_60-b27
+user.dir=/home/andy/workspace_ee _mars/FishTradeCompany
+os.name=Linux
+os.arch=amd64
+os.version=3.13.0-66-generic
+derby.system.home=null
+Database Class Loader started - derby.database.classpath=''

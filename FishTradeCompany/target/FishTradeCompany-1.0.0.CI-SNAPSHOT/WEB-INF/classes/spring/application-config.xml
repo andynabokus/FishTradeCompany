@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:tx="http://www.springframework.org/schema/tx"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans 
+	http://www.springframework.org/schema/beans/spring-beans-3.2.xsd
+	http://www.springframework.org/schema/context 
+	http://www.springframework.org/schema/context/spring-context-3.2.xsd
+	http://www.springframework.org/schema/tx 
+	http://www.springframework.org/schema/tx/spring-tx.xsd">
+
+	<description>Example configuration to get you started.</description>
+
+	<context:component-scan base-package="ua.com.fishtrade.*" />
+	
+
+	<bean id="dataSource" class="org.springframework.jdbc.datasource.DriverManagerDataSource">
+		<property name="driverClassName" value="org.apache.derby.jdbc.EmbeddedDriver"/>
+		<property name="url" value=value="jdbc:derby:/home/andy/Documents/DataBases/FishTradeCompany;create=true"//>
+		     <property name="username" value="FISHCOMPANY"/>
+		      <property name="password" value=""/>
+            
+	</bean>
+	
+   <bean id="strongEncryptor"  
+      class="org.jasypt.encryption.pbe.PooledPBEStringEncryptor">  
+    <property name="algorithm">  
+     <value>PBEWithMD5AndTripleDES</value>  
+    </property>  
+    <property name="password">  
+     <value>somepassword</value>  
+    </property>  
+    <property name="poolSize">  
+     <value>2</value>  
+    </property>  
+   </bean>  
+   
+   <bean id="jpaStringEncryptor" class="ua.com.fishtrade.util.JpaPBEStringEncryptor" depends-on="strongEncryptor">  
+    <property name="registeredName">  
+     <value>jpaStringEncryptor</value>  
+    </property>  
+    <property name="encryptor" ref="strongEncryptor"/>  
+   </bean>  
+  	
+	
+	<bean id="entityManagerFactory" class="org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean">
+		<property name="packagesToScan" value="ua.com.fishtrade.*"/>
+		<property name="dataSource" ref="dataSource"/>
+		<property name="persistenceUnitName" value="FishTradeCompany"/>
+		<property name="jpaDialect"> 
+			<bean class="org.springframework.orm.jpa.vendor.EclipseLinkJpaDialect"/> 
+		</property> 
+		<property name="jpaVendorAdapter"> 
+			<bean class="org.springframework.orm.jpa.vendor.EclipseLinkJpaVendorAdapter">
+				<property value="true" name="showSql"/> 
+				<property value="true" name="generateDdl"/>
+				<property name="databasePlatform" value="org.eclipse.persistence.platform.database.DerbyPlatform"/> 
+			</bean> 
+		</property>
+		<property name="jpaPropertyMap">
+			<map>
+				<entry key="eclipselink.weaving" value="false" />
+			</map>
+		</property>
+	</bean>
+	
+	<bean id="transactionManager" class="org.springframework.orm.jpa.JpaTransactionManager"> 
+		<property name="entityManagerFactory" ref="entityManagerFactory"/> 
+	</bean>
+	
+	<bean class="org.springframework.orm.jpa.support.PersistenceAnnotationBeanPostProcessor"/>
+	
+	<tx:annotation-driven transaction-manager="transactionManager"/>    
+</beans>

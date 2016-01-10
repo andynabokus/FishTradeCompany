@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:p="http://primefaces.org/ui">
+<h:head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Staff Login Page</title>
+</h:head>
+<body style="color: rgb(51, 0, 51); background-color: rgb(88, 161, 188);" alink="#660000" link="#ff6666" vlink="#cc6600">
+<h:form>            
+        <table width="100%" cellpadding="0" cellspacing="0" border="0" align="center"  class="outer_table">
+            <tr>
+                <td>
+                    <table width="500" height="300" cellpadding="0" cellspacing="0" border="0" align="center">
+                    <h:graphicImage  id="logoBionic" url="/resources/images/bionic_logo.png" style="width: 275px; height: 106px;" alt=""/>
+                        <tr>
+                            <td align="center">
+                                <p:panel header="Login">
+                                    <h:panelGrid columns="2" cellpadding="5">
+
+                                        <h:outputLabel for="Login" value="Login" />
+                                        <p:inputText id="Login" value="#{loginBeanStaff.login}" required="true" label="username"/>
+
+                                        <h:outputLabel for="Password" value="Password" />
+                                        <p:password id="Password" value="#{loginBeanStaff.password}" required="true" label="password" />
+
+                                        <p:commandButton value="Login"  action="#{loginBeanStaff.checkEmployee}"/>
+										
+                                    </h:panelGrid>
+                                   	<h:outputText value="Change Password"/> 
+        							<h:selectBooleanCheckbox value="#{loginBeanStaff.staffLoging[loginBeanStaff.login]}" />
+                                </p:panel>
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+        </table>
+        <h2>#{loginBeanStaff.result}</h2> 	
+    </h:form>
+</body>
+</html>

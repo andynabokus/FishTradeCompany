@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:p="http://primefaces.org/ui">
+<h:head>
+	<title>Income</title>
+	<h:outputStylesheet library="css" name="styleConfPay.css" target="head" />
+</h:head>
+
+<h:body>
+<h2>Income</h2> 
+    <h:form>
+	<p:chart type="line" model="#{incomeBean.lineModel}" style="height:500px;"/>
+		<h:commandButton value="Back To Control" action="CEOControl.xhtml" immediate="true"/>
+	</h:form>
+</h:body>
+</html>

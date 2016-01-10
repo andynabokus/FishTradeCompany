@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:p="http://primefaces.org/ui">
+<h:head>
+	<title>Fish List</title>
+	<h:outputStylesheet library="css" name="style.css" target="head" />
+</h:head>
+<body style="color: rgb(51, 0, 51); background-color: rgb(88, 161, 188);" alink="#660000" link="#ff6666" vlink="#cc6600">
+	<table style="text-align: left; width: 1236px; margin-left: auto; margin-right: auto; height: 110px;" border="0" cellpadding="0" cellspacing="2" >
+	  	<tbody>
+    	<tr>
+      		<td style="vertical-align: top;">
+      			<table style="text-align: left; width: 1198px; height: 115px;" border="0" cellpadding="2" cellspacing="2">
+        			<tbody>
+          				<tr>
+			<td>
+				<h:graphicImage  id="logoBionic" url="/resources/images/bionic_logo.png" style="width: 275px; height: 106px;" alt=""/>
+				<br/>
+			</td>
+			<td style="vertical-align: top; text-align: center; width: 95%; height: 95%;">
+				<big style="font-family: Purisa; color: rgb(153, 51, 0);"><big><big><big>Cart of Company #{fishStoreBean.customer.company}</big></big></big></big>
+				<br/>
+            </td>
+          				</tr>
+        			</tbody>
+        		</table>
+        	</td>
+        </tr>
+     </tbody>
+	</table>
+	     #{fishStoreBean.refreshList()}
+          <h:form>      
+			<p:dataTable value="#{fishStoreBean.fishStoreList}" var="fishList" 
+			style="font-family: Purisa; color: rgb(153, 51, 0);">
+			<p:column headerText="Selet Fish">
+        	<h:selectBooleanCheckbox value="#{fishStoreBean.selected[fishList.id]}" />
+    		</p:column>
+			    <p:column headerText="Name">
+			    <h:outputText value="#{fishList.fishName}" />
+			     </p:column>
+			     
+			     <p:column headerText="Available Weight">
+			    <h:outputText value="#{fishList.saleWeight}" />
+			     </p:column>
+			     
+			      <p:column headerText="Price per kg">
+			    <h:outputText value="#{fishList.salePrice}" />
+			     </p:column>
+			     
+			     <p:column headerText="Comments">
+			    <h:outputText value="#{fishList.comments} " />
+			     </p:column>
+			     
+			    <p:column headerText="Order Weight"> 
+				<h:inputText value="#{fishStoreBean.orderedWeight[fishList.id]}" size="10"></h:inputText>
+				</p:column>	
+			</p:dataTable>
+			<p:commandButton value="Confirm" action="#{fishStoreBean.cartCheck()}"/>
+			<p:commandButton value="LogOut"  action="#{fishStoreBean.logOut()}" immediate="true"/>	
+			</h:form>
+					
+</body>
+</html>
